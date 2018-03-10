@@ -1,17 +1,8 @@
-# MIT 6.S191: Introduction to Deep Learning
+# MIT 6.S191 Lab 1: Intro to TensorFlow and Music Generation with RNNs
 
-## Installation:
-To run these labs, first you must install the class docker container, which is available for free on the DockerHub. This can be done by first installing Docker: [Ubuntu](https://www.docker.com/docker-ubuntu), [Mac OSX](https://www.docker.com/docker-mac), [Windows](https://www.docker.com/docker-windows)
+![alt text](https://github.com/aamini/introtodeeplearning_labs/raw/master/lab1/img/music_waveform.png)
+## Part 1: Intro to TensorFlow
+TensorFlow is a software library extensively used in machine learning. Here we'll learn how computations are represented and how to define simple neural networks in TensorFlow. In this section you will learn the basic of Tensorflow computational graphs, Sessions, and the new imperitive version of Tensorflow: [Eager](https://research.googleblog.com/2017/10/eager-execution-imperative-define-by.html).
 
-For additional help to install Docker on Windows please see: [this link](WindowsDocker.md) -- thanks to Elrashid for putting it together! 
-
-## Starting the enviornment
-Once you donwload docker all you need to do is run the container to start! This can be done by running the following command in your command terminal:
-```
-docker run -p 8888:8888 -p 6006:6006 -v /path/to/introtodeeplearning_labs:/notebooks/introtodeeplearning_labs mit6s191/iap2018:labs
-```
-Make sure you replace `/path/to/introtodeeplearning_labs` with the correct path to this github repo.
-
-## Running the labs
-Now, to run the labs, open the Jupyter notebook on `localhost:8888` and enter the `lab1` or `lab2` directory. Go through the notebooks and fill in the `#TODO` cells to get the code to compile for yourself!
-
+## Part 2: Music Generation with RNNs
+In this portion of the lab, we will play around with building a Recurrent Neural Network (RNN) for music generation. We will be using the MIDI music toolkit to create a dataset of music files and build a model that captures the long term dependencies in musical notes. Finally, we will sample from this model to generate brand new music that has never been heard before!
